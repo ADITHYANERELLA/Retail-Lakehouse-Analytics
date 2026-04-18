@@ -5,7 +5,7 @@ The goal was to simulate how retail data is handled in production systems — fr
 
 ---
 
-## What this project does
+## Project Description
 
 * Ingests raw retail transaction data (CSV/JSON)
 * Builds a layered pipeline (Bronze → Silver → Gold)
@@ -14,6 +14,11 @@ The goal was to simulate how retail data is handled in production systems — fr
 
 I tried to keep the transformations close to how things are actually written in jobs rather than notebooks.
 
+---
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![PySpark](https://img.shields.io/badge/PySpark-Data%20Processing-orange)
+![Apache Spark](https://img.shields.io/badge/Apache%20Spark-Big%20Data-red)
+![Delta Lake](https://img.shields.io/badge/Delta%20Lake-Lakehouse-0A1F44)
 ---
 
 ## Dataset
@@ -138,6 +143,7 @@ Didn’t reprocess full data — filtered based on new dates.
 
 ### 4. Partitioning
 Partitioned output tables by date to avoid full scans.
+
 ---
 
 ## Things that didn’t go perfectly
@@ -147,6 +153,7 @@ Partitioned output tables by date to avoid full scans.
 * Some transformations could be optimized further
   
 Leaving these here intentionally since they reflect real issues.
+
 ---
 
 ## How to run
